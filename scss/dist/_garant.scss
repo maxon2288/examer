@@ -1,0 +1,124 @@
+.garant {
+	background-color: white;
+	margin-bottom: 40px;
+	display: flex;
+	.garant__item{
+		font-family: RobotoCondensed-Regular;
+		color: #0d163f;
+		margin-bottom: 30px;
+		width: 33%;
+
+		img {
+		animation: rollIn 1s;
+		}
+		span {
+			margin-top: 20px;
+			color: #737373;
+			font-size: 14px;
+			text-align: center;
+			i {
+				color: #3d4ac5;
+			}
+		}
+	}
+}
+
+.garant-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.garant-item-title {
+	color: #3d4ac5;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: 20px 0;
+	b{color: #0d163f;}
+}
+
+
+@-webkit-keyframes rollIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+            transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes rollIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+            transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.rollIn {
+  -webkit-animation-name: rollIn;
+          animation-name: rollIn;
+}
+
+@keyframes carousel {
+	0% {
+	 opacity: 0;
+	}
+	100% {
+		opacity: 1;
+		transform: rotate(360deg);
+	}
+}
+
+@media screen and(max-width: 970px) {
+	.garant {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		-ms-align-items: center;
+		align-items: center;
+		.garant__item {
+			display: flex;
+			align-items: center;
+			flex-direction: column;	
+			width: 100%;
+			img {
+				width: 60px;
+			}
+			h3 {
+				text-align: center;
+			}
+			p {
+				text-align: center;
+			}
+			span {
+				margin-top: 20px;
+				color: #737373;
+				font-size: 14px;
+				text-align: center;
+				i {
+					color: #3d4ac5;
+				}
+			}
+		}
+	}
+	.garant-container {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		align-items: center;
+		
+	}
+}

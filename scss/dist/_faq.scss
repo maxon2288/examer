@@ -1,0 +1,145 @@
+.faq-title {
+	margin-top: 30px;
+}
+
+.faq {
+	display: flex;
+	align-items: center;
+	&__menu{
+		background: #3d4ac5;
+		width: 45%;
+		height: 100%;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		position: relative;	
+		color: white;
+		font-family: RobotoCondensed-Regular;
+		&:before{
+			content: '';
+			position: absolute;
+			right: 100%;
+			top: 0;
+			height: 100%;
+			width: 9999px;
+			z-index: 1;
+			background-color: #3d4ac5;
+		}
+		.faq-menu-item{
+			display: flex;
+			max-width: 588px;
+			background: #3d4ac5;
+			position: relative;
+			a {
+				width: 100%;
+				text-decoration: none;
+				color: white;
+			}
+			img {
+				display: none;
+				position: absolute;
+				right: 0;
+				transition: all 0.2s;
+				top: 40%;
+				transform: translateX(50%);
+				width: 16px;
+				height: 16px;
+				box-shadow: 0 3px 9px rgba(61, 74, 197, 0.17);
+			}
+		}
+		p:hover img {
+			display: flex;
+		}
+		p {
+			background-color: #3d4ac5;
+			padding: 20px 30px 20px 15px;
+			box-sizing: border-box;
+			position: relative;
+			transition: 0.2s;
+			display: flex;
+			max-width: 588px;
+			width: 100%;
+			&:hover {
+				background: #cdff54;
+				color: #3d4ac5;
+				font-weight: bold;
+				display: flex;
+				&:before{
+				background-color: #cdff54;
+					opacity: 1;	
+				}
+			}
+			&:before{
+				content: '';
+				position: absolute;
+				right: 100%;
+				top: 0;
+				height: 100%;
+				transition: 0.2s;
+				width: 9999px;
+				z-index: 1;
+				background-color: #3d4ac5;
+			}
+		}
+	}
+	&__block{
+		height: 100%;
+		display: flex;
+		background: #fff;
+		color: #0d163f;
+		font-family: RobotoCondensed-Regular;
+		justify-content: center;
+		align-items: center;
+		.content__item {
+			display: none;
+		}
+		p{
+			height: 100%;
+			max-width: 480px;
+			vertical-align: center;
+			display: flex;
+			align-items: center;
+			margin-left: 80px;
+		}
+	}
+}
+
+@media screen and(max-width: 838px) {
+	.faq {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 100%;
+		&__menu {
+			width: 100%;
+			max-width: 838px;
+			.faq-menu-item {
+				max-width: 838px;
+				width: 100%;
+				p {
+					max-width: 838px;
+					width: 100%;
+					&::before {
+						display: none;
+					}
+				}
+				img {
+					right: 10px;
+				}
+			}
+		}
+	}
+	&__block {
+		width: 100%;
+		display: flex;
+		height: 300px;
+		&__p {
+			margin: 0 15px;
+			margin-top: 20px;
+			width: 100%;
+			text-align: center;
+			max-width: 838px;
+
+		}
+	}
+}

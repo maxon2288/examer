@@ -1,0 +1,330 @@
+.main-title {
+	color: #3d4ac5;
+	margin-top: 50px;
+	margin-bottom: 35px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	font-size: 30px;
+	font-family: Plumb-Black;
+	text-transform: uppercase;
+	@media screen and (max-width: 555px) {
+		font-size: 20px;
+		padding: 15px 0;
+		box-sizing: border-box;
+		padding-left: 15px;
+		padding-right: 15px;
+	}	
+}
+
+.map-container {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 90px;
+	overflow: hidden;
+	.map-menu{
+		position: relative;	
+		max-width: 490px;
+		animation-name: fadeInLeft;
+		animation-delay: 0.5s;
+		&:before{
+			content: '';
+			position: absolute;	
+			right: 0%;
+			z-index: -1;	
+			top: 0;	
+			height: 100%;	
+			width: 9999px;	
+			background-color: #3d4ac5;
+		}
+		li {
+			animation: fadeInRight;
+		}
+	}
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDownSmall;
+          animation-name: fadeInDownSmall;
+}
+
+.map-cont {
+	margin: 0 auto;
+	flex-direction: column;	
+}
+
+.map-menu {
+	background: #3d4ac5;
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	padding: 30px 0;
+	max-width: 490px;
+	box-sizing: border-box;
+	justify-content: center;
+	padding-right: 70px;
+	li {
+		margin: 10px 0;
+		animation:fadeInDown;
+		div {
+			width: 80px;
+			img{
+				display: flex;
+			}
+		}
+		p {
+			margin-right: 20px;
+			b{
+				font-weight: bold;
+			}
+		}
+	}
+	@media screen and (max-width: 785px) {
+		width: 100%;
+	}
+	li {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		color: white;
+		font-family: RobotoCondensed-Regular;
+		p{
+			width: 100%;
+			font-weight: 400;
+		}
+	}
+}
+
+.map-cont {margin: 0 auto;}
+
+.map-bg-container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	position: relative;
+	box-sizing: border-box;
+	.map-block {
+		width: 50%;
+		animation: fadeInLeft;
+		animation-delay: 0.8s;
+		.russia-block {
+			transform: scale(1);
+			position: relative;
+			left: 350px;
+			.russia-img {
+				position: absolute;
+				top: -170px;
+				z-index: -1;
+			}
+		}
+		p {
+			font-family: RobotoCondensed-Regular;
+			font-weight: bold;
+			font-size: 18px;
+			z-index: 100;
+			margin-right: auto;
+			position: relative;
+		}
+		.city {
+			position: relative;
+			display: flex;
+			height: 100%;
+			width: 100%;
+			left: 0%;
+			top: -20px;
+			z-index: 100;
+		}
+			.city-item {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				position: absolute;
+				width: 150px;
+				p {
+					font-family: RobotoCondensed-Regular;
+					color: #a7a7a7;
+					font-size: 12px;
+					text-align: center;
+					width: 100%;
+				transition: all 0.3s ease-in;
+					margin: 0;	
+				}
+				div {
+					display: flex;
+					width: 14px;
+					height: 14px;
+					border-radius: 50%;
+					background-color: #cdff54;
+					box-shadow: 0 1px 6.7px 1.3px rgba(41, 96, 201, 0.29);
+				transition: all 0.3s ease-out;
+					margin-top: 10px;
+				}
+			}
+			.city-item:hover{
+				color: #0d163f;
+				font-size: 14px;
+				p{
+					color: #0d163f;
+					font-size: 16px;
+				}
+				div {
+					width: 30px;
+					height: 30px;
+					display: flex;
+				}
+		}
+
+	}
+		
+		.city-item-1 {
+			left: 180px;
+			top: 20px;
+		}
+		.city-item-2 {
+			left: 80px;
+			top: 85px;
+		}
+		.city-item-3 {
+			left: 270px;
+			top: 105px;
+		}
+		.city-item-4 {
+			top:185px;	
+			left: 150px;				
+		}
+		.city-item-5 {
+			top: 255px;
+			left: 25px;
+		}
+}
+
+.map-content {
+	display: flex;
+	flex-direction: row-reverse;
+	position: relative;
+	.russia-block {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: -300px;
+		img.russia-img {
+			position: absolute;	
+			left: -200px;
+			top: -30px;
+			z-index: -1000;
+		}
+		.city {
+			position: absolute;	
+			left: -200px;
+		}
+	}
+}
+
+@media screen and (max-width: 1124px) {
+	.map-content {
+		display: flex;
+		.map-block {
+			.russia-block {
+				left: 160px;
+			}
+			p{
+				margin: 10px 0 0 10px;
+			}
+		}
+	}
+	.map-container {
+		.map-menu {
+			width: 100%;
+			max-width: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			flex-wrap: wrap;
+			padding: 0;
+			padding: 15px;
+			li {
+				display: flex;
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1101px) {
+	.map-content {
+		display: flex;
+		flex-direction: column-reverse;
+		.map-block {
+			.russia-block {
+				height: 527px;
+				left: 80%;
+				top: 70px;
+			}
+		}
+	}
+	.map-container {
+		padding-bottom: 0;
+		.map-menu {
+			li {
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 490px) {
+	.map-content {
+		.map-block {
+			.russia-block {
+				height: 450px;
+				left: 80%;
+				top: 70px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 430px) {
+	.map-content {
+		.map-block {
+			height: 350px;
+			.russia-block {
+				transform: scale(0.7);
+				top: -50px;
+				left: 100px;
+				z-index: -1;
+				height: 270px;
+			}
+		}
+	}
+}
