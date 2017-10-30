@@ -1,0 +1,40 @@
+//---------------------------------------------------------------
+//Fonts
+//---------------------------------------------------------------
+
+@import "parts/fonts.scss";
+
+
+//---------------------------------------------------------------
+//Style reset
+//---------------------------------------------------------------
+
+@import "parts/reset.scss";
+
+
+//---------------------------------------------------------------
+// Vendor
+//---------------------------------------------------------------
+
+@import "vendor/animate.scss";
+
+
+//---------------------------------------------------------------
+// Parts
+//---------------------------------------------------------------
+
+@import "parts/_base.scss";
+
+@import "parts/_header.scss";
+
+@import "parts/_map-container.scss";
+@import "parts/_swiper-slider.scss";
+@import "parts/_avtor.scss";
+@import "parts/_about.scss";
+@import "parts/_reviews-container.scss";
+@import "parts/_free.scss";
+@import "parts/_disc.scss";
+@import "parts/_faq.scss";
+@import "parts/_garant.scss";
+
+@import "parts/_footer.scss";

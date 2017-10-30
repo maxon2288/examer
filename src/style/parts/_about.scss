@@ -1,0 +1,134 @@
+.about {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 60px;
+	width: 100%;
+	@media screen and(max-width: 1230px) {
+		padding: 0 15px;
+		box-sizing: border-box;
+	}
+	
+}
+.about__items {
+	display: flex;
+	justify-content: space-between;
+	.eho-metro {
+		display: flex;
+		animation: fadeInLeft;
+		.eho {
+			width: 205px;
+			height: 100px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-right: 25px;
+			box-shadow: 0 0 6.6px 0.4px rgba(61, 74, 197, 0.33);
+			transition: all 0.4s;
+			&:hover {
+				transform: scale(1.15);
+				box-shadow: 0 0 12px 0.8px rgba(61, 74, 197, 0.33);
+			}
+		}
+
+		.metro {
+			width: 205px;
+			height: 100px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-right: 25px;
+			box-shadow: 0 0 6.6px 0.4px rgba(61, 74, 197, 0.33);
+			transition: all 0.4s;
+			&:hover {
+				transform: scale(1.15);
+				box-shadow: 0 0 12px 0.8px rgba(61, 74, 197, 0.33);
+			}
+		}
+		@media screen and (max-width: 460px) {
+			display: flex;
+			width: 100%;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			.eho {
+				margin-right: 0;	
+				margin-bottom: 20px;	
+			}
+			.metro {
+				margin-right: 0;	
+			}
+		}
+	}
+}
+.con-crown {
+	display: flex;
+	.crown {
+		width: 205px;
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.con-content{
+		color: #0d163f;
+		font-size: 20px;
+		margin-right: 15px;
+		margin-left: auto;	
+		font-family: RobotoCondensed-Regular;
+		span {
+			font-weight: bold;
+		}
+	}
+
+@media screen and (max-width: 900px) {
+	.about {
+		&__items {
+			flex-wrap: wrap;
+			.eho-metro {
+				width: 100%;
+				justify-content: space-between;
+			}
+			.con-crown {
+				width: 100%;
+				justify-content: space-between;
+				display: flex;
+				margin-top: 30px;
+				.con {
+					display: flex;
+					justify-content: flex-start;
+					p {
+						width: 100%;
+						margin: 0;
+					}
+				}
+				.crown {
+					justify-content: center;
+					width: 100%;
+					a {
+						display: block;
+
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+@media screen and (max-width: 446px) {
+	.con-crown {
+		display: flex;
+		flex-direction: column;
+		p {
+			text-align: center;
+			width: 100%;
+		}
+		.crown{
+			margin-top: 15px;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+		}
+	}
+}
